@@ -127,7 +127,7 @@ I use the Adam optimizer to minimize total loss. We iteratively update our outpu
 
 |       Content Image       	|       Style Image       	|     Output Image     	|
 |:-------------------------:	|:-----------------------:	|:--------------------:	|
-| ![](contents/dancing.jpg) 	| ![](styles/picasso.jpg) 	| ![](outputs/out.jpg) 	|
+| ![](contents/dancing.jpg) 	| ![](styles/picasso.jpg) 	| ![](outputs/out1.jpg) 	|
 
 
 

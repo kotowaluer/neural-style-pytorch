@@ -21,7 +21,7 @@ imsize = 512 if torch.cuda.is_available() else 128  # use small size if no gpu
 
 
 loader = transforms.Compose([
-    # transforms.Resize(imsize),
+    transforms.Resize(512),
     transforms.ToTensor()
 ])
 
@@ -44,7 +44,7 @@ def save_image(tensor, path):
     image = tensor.cpu().clone()
     image = image.squeeze(0)
     image = unloader(image)
-    image.save(os.path.join(path, "out.jpg"))
+    image.save(os.path.join(path, "out1.jpg"))
 
 
 # create a module to normalize input image so we can easily put it in a
