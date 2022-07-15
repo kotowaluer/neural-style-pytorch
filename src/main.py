@@ -61,9 +61,9 @@ def main():
     # dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
     style_img = image_loader(os.path.join(
-        args.style_path, "picasso.jpg")).to(device, torch.float)
+        args.style_path, "star.jpg")).to(device, torch.float)
     content_img = image_loader(os.path.join(
-        args.content_path, "cat2.jpeg")).to(device, torch.float)
+        args.content_path, "cat1.jpeg")).to(device, torch.float)
 
     assert style_img.size() == content_img.size(
     ), "Style and Content image should be the same size"
@@ -87,7 +87,7 @@ def main():
 
     if not os.path.exists(args.output_path):
         os.mkdir(args.output_path)
-    save_image(output_img, args.output_path)
+    save_image(output_img, args.output_path, "out31.jpg")
 
 
 if __name__ == '__main__':

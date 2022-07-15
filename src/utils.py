@@ -39,12 +39,12 @@ def image_loader(image_name):
     return image
 
 
-def save_image(tensor, path):
+def save_image(tensor, path, name):
     """Save a single image."""
     image = tensor.cpu().clone()
     image = image.squeeze(0)
     image = unloader(image)
-    image.save(os.path.join(path, "out1.jpg"))
+    image.save(os.path.join(path, name))
 
 
 # create a module to normalize input image so we can easily put it in a
